@@ -155,6 +155,13 @@ $( document ).ready(function() {
     $('.room-save').on('click', function(e){
         var elem = $(e.currentTarget);
         var modal = elem.parents('.modal-content');
+
+        if(modal.find('#reunion-name').val().trim() == ''){
+            toastr.warning('Name is required.', 'Reservation');
+            modal.find('#reunion-name').focus();
+            return false;
+        }
+
         var data = {
             'id': modal.find('#reunion-id').val(),
             'date': modal.find('#reunion-date').val(),
