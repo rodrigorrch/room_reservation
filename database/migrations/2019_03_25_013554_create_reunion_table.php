@@ -1,0 +1,43 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateReunionTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('room', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('name');
+            $table->string('description')->nullable();
+            $table->datetime('date');
+            $table->timestamps();
+        });
+
+        //        Schema::table('reunion',function (Blueprint $table){
+//            $table->foreign('user_id')->references('id')->on('users');
+//        });
+
+        Schema::table('room', function($table) {
+            $table->foreign('user_id')->references('id')->on('users');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('room');
+    }
+}

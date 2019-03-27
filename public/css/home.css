@@ -1,0 +1,47 @@
+.datepicker tbody tr:hover {
+  background-color: #eee;
+}
+
+.datepicker tbody tr:hover td,
+.datepicker tbody tr td.active {
+  border-radius: 0;
+}
+
+.datepicker tbody tr:hover td:last-child,
+.datepicker tbody tr td.active:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.datepicker tbody tr:hover td:first-child,
+.datepicker tbody tr td.active:nth-child(2) {
+  border-radius: 3px 0 0 3px;
+}
+
+.datepicker-week {
+  cursor: pointer;
+}
+
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.room-remove {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 6px;
+}
+
+td {
+  white-space: nowrap;
+  position: relative;
+}
+
+td:hover .room-remove {
+  display: block;
+}
+

@@ -1,0 +1,11 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/home.css": "/css/home.css",
+    "/css/toastr.css": "/css/toastr.css",
+    "/css/app.css": "/css/app.css",
+    "/js/home.js": "/js/home.js",
+    "/css/bootstrap-datepicker.css": "/css/bootstrap-datepicker.css",
+    "/js/bootstrap-datepicker.js": "/js/bootstrap-datepicker.js",
+    "/js/moment.js": "/js/moment.js",
+    "/js/toastr.js": "/js/toastr.js"
+}
