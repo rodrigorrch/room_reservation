@@ -157,7 +157,7 @@ $( document ).ready(function() {
         var modal = elem.parents('.modal-content');
 
         if(modal.find('#reunion-name').val().trim() == ''){
-            toastr.warning('Name is required.', 'Reservation');
+            toastr.warning('Enter a Name', 'Reservation');
             modal.find('#reunion-name').focus();
             return false;
         }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RoomRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Room;
@@ -80,7 +81,7 @@ class HomeController extends Controller
      * @param Request $request
      * @return \Exception|null
      */
-    public function storeOrUpdate(Request $request){
+    public function storeOrUpdate(RoomRequest $request){
         $data = $request->input('data');
 
         try{
