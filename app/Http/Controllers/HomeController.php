@@ -81,7 +81,7 @@ class HomeController extends Controller
      * @param Request $request
      * @return \Exception|null
      */
-    public function storeOrUpdate(RoomRequest $request){
+    public function storeOrUpdate(Request $request){
         $data = $request->input('data');
 
         try{
