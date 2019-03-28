@@ -62,7 +62,7 @@ class LoginTest extends TestCase
     {
         $user = factory(User::class)->create([
             'id' => random_int(1, 100),
-            'password' => bcrypt($password = 'i-love-laravel'),
+            'password' => bcrypt($password = '123456'),
         ]);
 
         $response = $this->post('/login', [
@@ -71,7 +71,7 @@ class LoginTest extends TestCase
             'remember' => 'on',
         ]);
 
-        $response->assertRedirect('/home');
+        $response->assertRedirect('/');
         // cookie assertion goes here
         $this->assertAuthenticatedAs($user);
     }
