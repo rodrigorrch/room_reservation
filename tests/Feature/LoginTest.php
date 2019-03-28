@@ -55,6 +55,7 @@ class LoginTest extends TestCase
         $this->assertTrue(session()->hasOldInput('email'));
         $this->assertFalse(session()->hasOldInput('password'));
         $this->assertGuest();
+        
     }
 
     public function test_remember_me_functionality()
